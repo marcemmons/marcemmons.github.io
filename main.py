@@ -14,7 +14,7 @@ ai = OpenAI()
 ai.api_key = os.getenv("OPENAI_API_KEY")
 
 def update_blog(commit_message ='updates blog'):
-    repo = Repo(PATH_TO_BLOG)
+    repo = Repo(PATH_TO_REPO)
     repo.git.add(all=True)
     repo.index.commit(commit_message)
     origin = repo.remote(name='origin')
