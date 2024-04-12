@@ -1,6 +1,6 @@
 from openai import *
 import os
-from git import Repo
+from git import *
 from pathlib import Path
 
 PATH_TO_REPO = Path('c:\\github\\marcemmons.github.io\\.git')
