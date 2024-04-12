@@ -20,7 +20,7 @@ def update_blog(commit_message ='updates blog'):
     origin = repo.remote(name='origin')
     origin.push
 
-random_text_string = '<h2> NEW Random text </h2>'
+random_text_string = '<h2> A VERY NEW Random text </h2>'
 
 with open(PATH_TO_BLOG/'index.html', 'w' ) as f:
     f.write(random_text_string)
