@@ -21,7 +21,7 @@ def update_blog(commit_message ='updates blog'):
     origin.push
     
 
-random_text_string = '<h2> Very Hopeful text </h2>'
+random_text_string = '<h2> ANOTHER Very Hopeful text string </h2>'
 
 with open(PATH_TO_BLOG/'index.html', 'w' ) as f:
     f.write(random_text_string)
