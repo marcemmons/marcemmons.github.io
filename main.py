@@ -17,7 +17,7 @@ def update_blog(commit_message ='updates blog'):
     repo = Repo(PATH_TO_REPO)
     repo.git.add(all=True)
     repo.index.commit(commit_message)
-    origin = Repo.remote(name='origin')
+    origin = repo.remote(name='origin')
     origin.push
 
 random_text_string = '<h2> Very Hopeful text </h2>'
