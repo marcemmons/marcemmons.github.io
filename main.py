@@ -17,10 +17,10 @@ def update_blog(commit_message ='updates blog'):
     repo = Repo(PATH_TO_REPO)
     repo.git.add(all=True)
     repo.index.commit(commit_message)
-    origin = repo.remote(name='origin').push
-    #origin.push
+    origin = repo.remote(name='origin')
+    origin.push
 
-random_text_string = '<h2> Random text </h2>'
+random_text_string = '<h2> NEW Random text </h2>'
 
 with open(PATH_TO_BLOG/'index.html', 'w' ) as f:
     f.write(random_text_string)
