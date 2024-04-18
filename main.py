@@ -48,7 +48,7 @@ def create_new_blog(title, content, cover_image):
     else:
         raise FileExistsError('File already exists, ABORT!')
     
-    path_to_new_content = create_new_blog('Test Title', 'pure gibberish and lots of it', 'c:\ecojohn.jpg')
+path_to_new_content = create_new_blog('Test Title', 'pure gibberish and lots of it', 'c:\ecojohn.jpg')
     
 
 random_text_string = '<h2> ANOTHER ONE </h2>'
