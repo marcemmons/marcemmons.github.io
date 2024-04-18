@@ -1,5 +1,6 @@
 import shutil
 from openai import *
+from bs4 import BeautifulSoup as Soup
 import os
 from git import *
 from pathlib import Path
@@ -48,11 +49,15 @@ def create_new_blog(title, content, cover_image):
     else:
         raise FileExistsError('File already exists, ABORT!')
     
+with open(PATH_TO_BLOG/'index.html') as index:
+    soup = Soup(index.read())
+
+print(soup)
+
 path_to_new_content = create_new_blog('Test Title', 'pure gibberish and lots of it', 'c:\ecojohn.jpg')
     
 
 random_text_string = '<h2> ANOTHER ONE </h2>'
-
 with open(PATH_TO_BLOG/'index.html', 'w' ) as f:
     f.write(random_text_string)
 
